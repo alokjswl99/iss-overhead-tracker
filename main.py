@@ -1,3 +1,4 @@
+import os
 import requests
 from datetime import datetime
 import smtplib
@@ -5,8 +6,8 @@ import time
 
 my_lat = 23.259933
 my_long = 77.412613
-my_email = 'alokjswl99@gmail.com'
-password = 'fdycqjrzvlthlymr'
+my_email = os.getenv('smtp_username')
+password = os.getenv('smtp_password')
 
 
 def proximity():
